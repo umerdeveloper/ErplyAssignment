@@ -19,6 +19,7 @@
 		CBF6B4D32A40D9DD003D2124 /* NewsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D22A40D9DD003D2124 /* NewsDetailScreen.swift */; };
 		CBF6B4D62A40DAA4003D2124 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */; };
 		CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */; };
+		CBF6B4DB2A40E66C003D2124 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4DA2A40E66C003D2124 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CBF6B4D22A40D9DD003D2124 /* NewsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailScreen.swift; sourceTree = "<group>"; };
 		CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		CBF6B4DA2A40E66C003D2124 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */,
+				CBF6B4DA2A40E66C003D2124 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */,
 				CBF6B48C2A40D47C003D2124 /* ErplyAssignmentApp.swift in Sources */,
 				CBF6B4D32A40D9DD003D2124 /* NewsDetailScreen.swift in Sources */,
+				CBF6B4DB2A40E66C003D2124 /* LoginViewModel.swift in Sources */,
 				CBF6B4D62A40DAA4003D2124 /* LoginScreen.swift in Sources */,
 				CBF6B4C32A40D7BA003D2124 /* AppFlowManager.swift in Sources */,
 				CBF6B4C02A40D748003D2124 /* AppFlowScreen.swift in Sources */,

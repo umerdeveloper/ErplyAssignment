@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct LoginScreen: View {
+
+    @StateObject var viewModel = LoginViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationTitle("Login")
+        VStack(alignment: .center, spacing: 20) {
+            TextField("Email", text: $viewModel.email)
+                .padding()
+                .textFieldStyle(.roundedBorder)
+            
+            Button {
+                viewModel.perform(action: .handleLogin)
+            } label: {
+                Text("Login")
+            }
+            .buttonStyle(.borderedProminent)
+            .disabled(viewModel.isValidEmail == false)
+        }
+        .navigationTitle("Login")
     }
 }
 
