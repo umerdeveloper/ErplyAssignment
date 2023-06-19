@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ErplyAssignmentApp: App {
+
+    @StateObject private var appFlowManager = AppFlowManager()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppFlowScreen()
+                .environmentObject(appFlowManager)
         }
     }
 }

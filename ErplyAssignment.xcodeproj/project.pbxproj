@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		CBF6B48C2A40D47C003D2124 /* ErplyAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */; };
-		CBF6B48E2A40D47C003D2124 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B48D2A40D47C003D2124 /* ContentView.swift */; };
 		CBF6B4902A40D47D003D2124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B48F2A40D47D003D2124 /* Assets.xcassets */; };
 		CBF6B4932A40D47D003D2124 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B4922A40D47D003D2124 /* Preview Assets.xcassets */; };
 		CBF6B49D2A40D47D003D2124 /* ErplyAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B49C2A40D47D003D2124 /* ErplyAssignmentTests.swift */; };
 		CBF6B4A72A40D47D003D2124 /* ErplyAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4A62A40D47D003D2124 /* ErplyAssignmentUITests.swift */; };
 		CBF6B4A92A40D47D003D2124 /* ErplyAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4A82A40D47D003D2124 /* ErplyAssignmentUITestsLaunchTests.swift */; };
+		CBF6B4C02A40D748003D2124 /* AppFlowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4BF2A40D748003D2124 /* AppFlowScreen.swift */; };
+		CBF6B4C32A40D7BA003D2124 /* AppFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4C22A40D7BA003D2124 /* AppFlowManager.swift */; };
+		CBF6B4D12A40D9D6003D2124 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D02A40D9D6003D2124 /* NewsScreen.swift */; };
+		CBF6B4D32A40D9DD003D2124 /* NewsDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D22A40D9DD003D2124 /* NewsDetailScreen.swift */; };
+		CBF6B4D62A40DAA4003D2124 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */; };
+		CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		CBF6B4882A40D47C003D2124 /* ErplyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErplyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErplyAssignmentApp.swift; sourceTree = "<group>"; };
-		CBF6B48D2A40D47C003D2124 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBF6B48F2A40D47D003D2124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBF6B4922A40D47D003D2124 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CBF6B4982A40D47D003D2124 /* ErplyAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErplyAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +48,12 @@
 		CBF6B4A22A40D47D003D2124 /* ErplyAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErplyAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF6B4A62A40D47D003D2124 /* ErplyAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErplyAssignmentUITests.swift; sourceTree = "<group>"; };
 		CBF6B4A82A40D47D003D2124 /* ErplyAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErplyAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBF6B4BF2A40D748003D2124 /* AppFlowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowScreen.swift; sourceTree = "<group>"; };
+		CBF6B4C22A40D7BA003D2124 /* AppFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowManager.swift; sourceTree = "<group>"; };
+		CBF6B4D02A40D9D6003D2124 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		CBF6B4D22A40D9DD003D2124 /* NewsDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailScreen.swift; sourceTree = "<group>"; };
+		CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,9 @@
 		CBF6B48A2A40D47C003D2124 /* ErplyAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */,
-				CBF6B48D2A40D47C003D2124 /* ContentView.swift */,
+				CBF6B4B52A40D585003D2124 /* App */,
+				CBF6B4C12A40D76F003D2124 /* Utility */,
+				CBF6B4BC2A40D6FF003D2124 /* Screens */,
 				CBF6B48F2A40D47D003D2124 /* Assets.xcassets */,
 				CBF6B4912A40D47D003D2124 /* Preview Content */,
 			);
@@ -125,6 +136,74 @@
 				CBF6B4A82A40D47D003D2124 /* ErplyAssignmentUITestsLaunchTests.swift */,
 			);
 			path = ErplyAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		CBF6B4B52A40D585003D2124 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */,
+				CBF6B4C22A40D7BA003D2124 /* AppFlowManager.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CBF6B4BC2A40D6FF003D2124 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4CA2A40D9A2003D2124 /* AppFlow */,
+				CBF6B4D42A40DA9E003D2124 /* Login */,
+				CBF6B4CC2A40D9B7003D2124 /* News */,
+				CBF6B4CD2A40D9BE003D2124 /* NewsDetail */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CBF6B4C12A40D76F003D2124 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4D72A40DBA3003D2124 /* Storage */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CBF6B4CA2A40D9A2003D2124 /* AppFlow */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4BF2A40D748003D2124 /* AppFlowScreen.swift */,
+			);
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		CBF6B4CC2A40D9B7003D2124 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4D02A40D9D6003D2124 /* NewsScreen.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CBF6B4CD2A40D9BE003D2124 /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4D22A40D9DD003D2124 /* NewsDetailScreen.swift */,
+			);
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		CBF6B4D42A40DA9E003D2124 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CBF6B4D72A40DBA3003D2124 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +336,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF6B48E2A40D47C003D2124 /* ContentView.swift in Sources */,
+				CBF6B4D12A40D9D6003D2124 /* NewsScreen.swift in Sources */,
+				CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */,
 				CBF6B48C2A40D47C003D2124 /* ErplyAssignmentApp.swift in Sources */,
+				CBF6B4D32A40D9DD003D2124 /* NewsDetailScreen.swift in Sources */,
+				CBF6B4D62A40DAA4003D2124 /* LoginScreen.swift in Sources */,
+				CBF6B4C32A40D7BA003D2124 /* AppFlowManager.swift in Sources */,
+				CBF6B4C02A40D748003D2124 /* AppFlowScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
