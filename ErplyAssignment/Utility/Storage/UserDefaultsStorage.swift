@@ -29,8 +29,6 @@ enum UserDefaultsStorageKey: String, PermanentStorageKey {
 
 final class DefaultUserDefaultStorage: UserDefaultStorage {
 
-    static let shared: UserDefaultStorage = DefaultUserDefaultStorage()
-
     private let defaults = UserDefaults.standard
     
     func set<T: Encodable>(data: T?, key: PermanentStorageKey) {

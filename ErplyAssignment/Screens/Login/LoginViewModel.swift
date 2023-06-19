@@ -12,8 +12,10 @@ final class LoginViewModel: ObservableObject {
 
     @Published var email: String = ""
 
+    let storage: UserDefaultStorage = DefaultUserDefaultStorage()
+
     var isValidEmail: Bool {
-        email.isEmpty == false && isValidEmailAddress()
+        isValidEmailAddress()
     }
 }
 
@@ -34,6 +36,7 @@ extension LoginViewModel {
 // MARK: - Action methods
 extension LoginViewModel {
     private func handleLoginTap() {
+        storage.set(data: email, key: UserDefaultsStorageKey.login)
     }
 
     private func isValidEmailAddress() -> Bool {

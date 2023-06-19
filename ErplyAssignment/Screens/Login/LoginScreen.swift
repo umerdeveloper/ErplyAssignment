@@ -13,6 +13,8 @@ enum Field: Hashable {
 
 struct LoginScreen: View {
 
+    @EnvironmentObject var appFlowManager: AppFlowManager
+
     @StateObject var viewModel = LoginViewModel()
     @FocusState private var focusedField: Field?
 
@@ -25,8 +27,7 @@ struct LoginScreen: View {
                 .focused($focusedField, equals: .email)
             
             Button {
-                focusedField = nil
-                viewModel.perform(action: .handleLogin)
+                loginTapped()
             } label: {
                 Text("Login")
             }
@@ -43,6 +44,17 @@ struct LoginScreen: View {
             focusedField = nil
         }
         .navigationTitle("Login")
+    }
+
+    private func loginTapped() {
+        // Dismiss keyboard
+        focusedField = nil
+
+        // Store email address
+        viewModel.perform(action: .handleLogin)
+        
+        // Update state
+        appFlowManager.perform(action: .updateState(.news))
     }
 }
 

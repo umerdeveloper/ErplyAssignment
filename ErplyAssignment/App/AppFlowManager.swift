@@ -23,12 +23,15 @@ final class AppFlowManager: ObservableObject {
 extension AppFlowManager {
     enum Action {
         case startFlow
+        case updateState(AppFlowScreenState)
     }
 
     func perform(action: Action) {
         switch action {
         case .startFlow:
             startFlow()
+        case .updateState(let state):
+            updateState(state)
         }
     }
 }
@@ -44,7 +47,7 @@ extension AppFlowManager {
 
     private func startFlow() {
 
-        guard let email = storage.get(key: UserDefaultsStorageKey.login, decode: String.self) else {
+        guard (storage.get(key: UserDefaultsStorageKey.login, decode: String.self)) != nil else {
             updateState(.login)
             return
         }
