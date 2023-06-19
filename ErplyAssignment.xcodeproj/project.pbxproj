@@ -20,6 +20,7 @@
 		CBF6B4D62A40DAA4003D2124 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */; };
 		CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */; };
 		CBF6B4DB2A40E66C003D2124 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4DA2A40E66C003D2124 /* LoginViewModel.swift */; };
+		CBF6B4DD2A40EE5F003D2124 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B4DC2A40EE5F003D2124 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		CBF6B4D52A40DAA4003D2124 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		CBF6B4D82A40DBBF003D2124 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		CBF6B4DA2A40E66C003D2124 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CBF6B4DC2A40EE5F003D2124 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				CBF6B4D02A40D9D6003D2124 /* NewsScreen.swift */,
+				CBF6B4DC2A40EE5F003D2124 /* NewsViewModel.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF6B4D12A40D9D6003D2124 /* NewsScreen.swift in Sources */,
+				CBF6B4DD2A40EE5F003D2124 /* NewsViewModel.swift in Sources */,
 				CBF6B4D92A40DBBF003D2124 /* UserDefaultsStorage.swift in Sources */,
 				CBF6B48C2A40D47C003D2124 /* ErplyAssignmentApp.swift in Sources */,
 				CBF6B4D32A40D9DD003D2124 /* NewsDetailScreen.swift in Sources */,
