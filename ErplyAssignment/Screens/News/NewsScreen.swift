@@ -14,17 +14,46 @@ struct NewsScreen: View {
     @StateObject var viewModel = NewsViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationTitle("News")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        logoutTapped()
-                    } label: {
-                        Text("Logout")
+        List {
+
+            ForEach(viewModel.newsList, id: \.id) { news in
+
+                // Hide right arrow on navigation link
+                ZStack {
+                    NewsCellView(news: news)
+                    NavigationLink(destination: NewsDetailScreen(newsDetail: news.details)) {
+                        EmptyView()
                     }
+                    .opacity(0)
+                }
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 8, trailing: 0))
+                .listRowSeparator(.hidden)
+            }
+            
+            if viewModel.isNewsListFull == false {
+                ListLoadingView()
+                .onAppear {
+                    self.viewModel.perform(action: .getNews)
                 }
             }
+            
+            if viewModel.isPresentedEmptyListMessage {
+                EmptyListMessageView(message: "Oops something went wrong, please come later...")
+            }
+        }
+        .onViewDidLoad {
+            viewModel.perform(action: .getNews)
+        }
+        .navigationTitle("News")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    logoutTapped()
+                } label: {
+                    Text("Logout")
+                }
+            }
+        }
     }
 
     private func logoutTapped() {

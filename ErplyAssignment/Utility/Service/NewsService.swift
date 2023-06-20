@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NewsService: AnyObject {
-    func getNewsList(query: NewsListQuery) async -> Result<NewsListModel, NetworkError>
+    func getNewsList(query: NewsListQuery) async -> Result<NewsModel, NetworkError>
 }
 
 final class DefaultNewsService {
@@ -21,7 +21,7 @@ final class DefaultNewsService {
 
 // MARK: - NewsService
 extension DefaultNewsService: NewsService {
-    func getNewsList(query: NewsListQuery) async -> Result<NewsListModel, NetworkError> {
+    func getNewsList(query: NewsListQuery) async -> Result<NewsModel, NetworkError> {
 
         let endpoint = NewsListEndpoint.getNewsList(query: query)
         let request = endpoint.buildRequest()
@@ -29,7 +29,7 @@ extension DefaultNewsService: NewsService {
         switch request {
 
         case .success(let request):
-            return await webService.performRequest(request, returnType: NewsListModel.self)
+            return await webService.performRequest(request, returnType: NewsModel.self)
 
         case .failure(let networkError):
             return .failure(networkError)

@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct NewsDetailScreen: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .navigationTitle("Details")
-    }
-}
 
-struct NewsDetailScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsDetailScreen()
+    let newsDetail: NewsDetailModelPreview
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                Text(newsDetail.author).font(.headline)
+                Text(newsDetail.description).font(.body)
+                HStack {
+                    Text(newsDetail.sourceOfNewsName).font(.subheadline)
+                    if let url = newsDetail.sourceOfNewsUrl {
+                        Link(destination: url) {
+                            Text("read more...").font(.subheadline)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Details")
+            .navigationBarTitleDisplayMode(.inline)
+            .padding()
+        }
     }
 }
