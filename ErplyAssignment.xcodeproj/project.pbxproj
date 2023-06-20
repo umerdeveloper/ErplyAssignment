@@ -34,6 +34,15 @@
 		CB455DF72A41A72B005F9002 /* PublishedDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DF62A41A72B005F9002 /* PublishedDateView.swift */; };
 		CB455DF92A41A7AA005F9002 /* ListLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DF82A41A7AA005F9002 /* ListLoadingView.swift */; };
 		CB455DFB2A41A7E5005F9002 /* EmptyListMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DFA2A41A7E5005F9002 /* EmptyListMessageView.swift */; };
+		CB455DFD2A41AA0B005F9002 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DFC2A41AA0B005F9002 /* DateTests.swift */; };
+		CB455DFE2A41AA32005F9002 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DD62A41A44E005F9002 /* String+Extensions.swift */; };
+		CB455E012A41AAAA005F9002 /* NewsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455E002A41AAAA005F9002 /* NewsResponse.json */; };
+		CB455E022A41AB33005F9002 /* NewsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455E002A41AAAA005F9002 /* NewsResponse.json */; };
+		CB455E042A41AB58005F9002 /* NewsEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455E032A41AB58005F9002 /* NewsEmptyResponse.json */; };
+		CB455E052A41AB58005F9002 /* NewsEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455E032A41AB58005F9002 /* NewsEmptyResponse.json */; };
+		CB455E082A41AD40005F9002 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455E062A41AD40005F9002 /* MockURLProtocol.swift */; };
+		CB455E0A2A41ADB6005F9002 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455E092A41ADB6005F9002 /* WebServiceTests.swift */; };
+		CB455E0B2A41AEA0005F9002 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455DCB2A41A354005F9002 /* NetworkError.swift */; };
 		CBF6B48C2A40D47C003D2124 /* ErplyAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */; };
 		CBF6B4902A40D47D003D2124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B48F2A40D47D003D2124 /* Assets.xcassets */; };
 		CBF6B4932A40D47D003D2124 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF6B4922A40D47D003D2124 /* Preview Assets.xcassets */; };
@@ -95,6 +104,11 @@
 		CB455DF62A41A72B005F9002 /* PublishedDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedDateView.swift; sourceTree = "<group>"; };
 		CB455DF82A41A7AA005F9002 /* ListLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLoadingView.swift; sourceTree = "<group>"; };
 		CB455DFA2A41A7E5005F9002 /* EmptyListMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListMessageView.swift; sourceTree = "<group>"; };
+		CB455DFC2A41AA0B005F9002 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		CB455E002A41AAAA005F9002 /* NewsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsResponse.json; sourceTree = "<group>"; };
+		CB455E032A41AB58005F9002 /* NewsEmptyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsEmptyResponse.json; sourceTree = "<group>"; };
+		CB455E062A41AD40005F9002 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		CB455E092A41ADB6005F9002 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
 		CBF6B4882A40D47C003D2124 /* ErplyAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErplyAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF6B48B2A40D47C003D2124 /* ErplyAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErplyAssignmentApp.swift; sourceTree = "<group>"; };
 		CBF6B48F2A40D47D003D2124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -248,6 +262,16 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		CB455DFF2A41AA9A005F9002 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				CB455E062A41AD40005F9002 /* MockURLProtocol.swift */,
+				CB455E002A41AAAA005F9002 /* NewsResponse.json */,
+				CB455E032A41AB58005F9002 /* NewsEmptyResponse.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		CBF6B47F2A40D47C003D2124 = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +315,10 @@
 		CBF6B49B2A40D47D003D2124 /* ErplyAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB455DFF2A41AA9A005F9002 /* Mock */,
 				CBF6B49C2A40D47D003D2124 /* ErplyAssignmentTests.swift */,
+				CB455E092A41ADB6005F9002 /* WebServiceTests.swift */,
+				CB455DFC2A41AA0B005F9002 /* DateTests.swift */,
 			);
 			path = ErplyAssignmentTests;
 			sourceTree = "<group>";
@@ -494,6 +521,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB455E022A41AB33005F9002 /* NewsResponse.json in Resources */,
+				CB455E042A41AB58005F9002 /* NewsEmptyResponse.json in Resources */,
 				CBF6B4932A40D47D003D2124 /* Preview Assets.xcassets in Resources */,
 				CBF6B4902A40D47D003D2124 /* Assets.xcassets in Resources */,
 			);
@@ -503,6 +532,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB455E012A41AAAA005F9002 /* NewsResponse.json in Resources */,
+				CB455E052A41AB58005F9002 /* NewsEmptyResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +595,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF6B49D2A40D47D003D2124 /* ErplyAssignmentTests.swift in Sources */,
+				CB455DFE2A41AA32005F9002 /* String+Extensions.swift in Sources */,
+				CB455DFD2A41AA0B005F9002 /* DateTests.swift in Sources */,
+				CB455E0B2A41AEA0005F9002 /* NetworkError.swift in Sources */,
+				CB455E082A41AD40005F9002 /* MockURLProtocol.swift in Sources */,
+				CB455E0A2A41ADB6005F9002 /* WebServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,9 @@ enum NetworkError: Error {
     case badUrl
 }
 
+extension NetworkError: Equatable {
+}
+
 enum DecodingErrorType: Error {
     case dataCorrupted
     case keyNotFound

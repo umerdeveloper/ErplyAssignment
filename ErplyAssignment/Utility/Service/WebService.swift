@@ -13,6 +13,12 @@ protocol WebService: AnyObject {
 }
 
 class DefaultWebService {
+
+    let session: URLSession
+
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
 }
 
 // MARK: - WebService
@@ -29,7 +35,7 @@ extension DefaultWebService: WebService {
             
             Log.info("Did request, \(request)")
             
-            let (data, response) = try await URLSession.shared.data(for: request)
+            let (data, response) = try await session.data(for: request)
 
             Log.info("Data: \(data.prettyJSONString ?? "Empty"), Request: \(request)")
             

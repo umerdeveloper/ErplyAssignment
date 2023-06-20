@@ -10,27 +10,70 @@ import XCTest
 
 final class ErplyAssignmentTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testNewsNotNil() throws {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        guard let url = Bundle.main.url(forResource: "NewsResponse", withExtension: "json") else {
+            XCTFail("Missing file: NewsResponse.json")
+            return
         }
+        
+        let json = try Data(contentsOf: url)
+        let model = try? JSONDecoder().decode(NewsModel.self, from: json)
+
+        XCTAssertNotNil(model?.articles)
+    }
+
+    func testNewsScreenPropertiesNotNil() throws {
+
+        guard let url = Bundle.main.url(forResource: "NewsResponse", withExtension: "json") else {
+            XCTFail("Missing file: NewsResponse.json")
+            return
+        }
+
+        let json = try Data(contentsOf: url)
+        let model = try? JSONDecoder().decode(NewsModel.self, from: json)
+        
+        XCTAssertNotNil(model?.articles)
+        
+        let article = model?.articles?.first
+        
+        XCTAssertNotNil(article?.url)
+        XCTAssertNotNil(article?.title)
+        XCTAssertNotNil(article?.publishedAt)
+        XCTAssertNotNil(article?.urlToImage)
+    }
+    
+    func testNewsDetailScreenPropertiesNotNil() throws {
+
+        guard let url = Bundle.main.url(forResource: "NewsResponse", withExtension: "json") else {
+            XCTFail("Missing file: NewsResponse.json")
+            return
+        }
+
+        let json = try Data(contentsOf: url)
+        let model = try? JSONDecoder().decode(NewsModel.self, from: json)
+
+        let article = model?.articles?.first
+        
+        XCTAssertNotNil(article?.author)
+        XCTAssertNotNil(article?.description)
+        XCTAssertNotNil(article?.source?.name)
+        XCTAssertNotNil(article?.url)
+    }
+
+    func testNewsEmpty() throws {
+
+        guard let url = Bundle.main.url(forResource: "NewsEmptyResponse", withExtension: "json") else {
+            XCTFail("Missing file: NewsEmpty.json")
+            return
+        }
+
+        let json = try Data(contentsOf: url)
+        let model = try? JSONDecoder().decode(NewsModel.self, from: json)
+        
+        let articles = model?.articles
+        
+        XCTAssertTrue(articles!.isEmpty)
     }
 
 }
